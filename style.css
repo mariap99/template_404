@@ -1,0 +1,132 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+/* variables */
+:root{
+    --header-height: 3.5rem;
+/* colores */
+    --first-color: hsl(250, 34%, 50%);
+    --second-color: hwb(250 13% 52%);
+    --font-color: rgb(237, 229, 246);
+    --second-font-color: #1e1e1e;
+/* body font */
+    --body-font: 'Space Grotesk', sans-serif;
+    --biggest-font-size: 2.375rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+}
+/* reponsive thopografy */
+@media(min-width: 1024px){
+    :root{
+    --biggest-font-size: 5rem;
+    --normal-font-size: 1.2rem;
+    --smaller-font-size: .813rem;
+    }
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: var(--body-font);
+    font-size: var(--body-font);
+    background-color: var(--first-color);
+    font-weight: 500;
+    color: var(--font-color);
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+.header, .main, .home_footer{
+    width: 100%;
+    background-color: var(--first-color);
+}
+.header{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.nav_logo{
+    font-size: var(--normal-font-size);
+    margin-left: 20px;
+    color: var(--font-color);
+}
+.main{
+    width: 100%;
+}
+.home_container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.box{
+    width: 80%;
+    margin: auto;
+}
+.home_data{
+    text-align: center;
+}
+.home_subtitle{
+    font-size: var(--normal-font-size);
+    color: var(--second-font-color);
+}
+.home_title{
+    font-size: var(--biggest-font-size);
+    margin: 0.75rem 0;
+}
+.home_description{
+    font-size: var(--normal-font-size);
+}
+.home_img{
+    width: 300px;
+}
+.home_img img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.home_button{
+    margin-top: 1.5rem;
+    display: inline-block; 
+    background-color: var(--second-font-color);
+    color: var(--font-color);
+    padding: .80rem 1.5rem;
+    border-radius: 3rem;
+}
+.home_button:hover{
+    box-shadow: 0.5rem 0.5rem 1rem 0rem var(--second-color);
+}
+.home_footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+} 
+.contact_phone, .contact_email, .contact_adress{
+    font-size: var(--smaller-font-size);
+    text-align: center;
+    width: 200px;
+    height: 20px;
+}
+@media(min-width: 1024px){
+
+    .home_container{
+        width: 80%;
+        margin: auto;
+    }
+    .box{
+        width: 50%;
+    }
+    .home_data{
+        order: 2;
+    }
+    .home_img{
+        order: 1;
+    }
+}
+
